@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"
+        motion:interpolator="linear">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@+id/imageView"
+            motion:touchAnchorSide="right" />
+
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:percentY="-0.18"
+                motion:target="@+id/imageView" />
+        </KeyFrameSet>
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:percentY="-0.18"
+                motion:target="@+id/imageView2" />
+        </KeyFrameSet>
+        <ConstraintSet android:id="@+id/start">
+            <Constraint
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginBottom="106dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:srcCompat="@android:color/background_dark">
+
+            </Constraint>
+
+            <Constraint
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="106dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:srcCompat="@android:color/holo_blue_bright">
+
+            </Constraint>
+            <Constraint
+                android:id="@+id/view"
+                android:layout_width="10dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="192dp"
+                android:layout_marginTop="138dp"
+                android:layout_marginEnd="193dp"
+                android:layout_marginBottom="141dp"
+                android:background="@color/colorPrimary"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toStartOf="@+id/imageView2"
+                motion:layout_constraintStart_toEndOf="@+id/imageView"
+                motion:layout_constraintTop_toTopOf="parent">
+
+            </Constraint>
+
+        </ConstraintSet>
+        <ConstraintSet android:id="@+id/end">
+            <Constraint
+                android:id="@id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="106dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:srcCompat="@android:color/holo_blue_light">
+
+            </Constraint>
+
+            <Constraint
+                android:id="@id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginBottom="106dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:srcCompat="@android:color/background_dark">
+
+            </Constraint>
+
+            <Constraint
+                android:id="@id/view"
+                android:layout_width="10dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="192dp"
+                android:layout_marginTop="137dp"
+                android:layout_marginEnd="193dp"
+                android:layout_marginBottom="142dp"
+                android:background="@color/colorPrimary"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toStartOf="@+id/imageView"
+                motion:layout_constraintStart_toEndOf="@+id/imageView2"
+                motion:layout_constraintTop_toTopOf="parent" />
+        </ConstraintSet>
+    </Transition>
+</MotionScene>
